@@ -1,4 +1,5 @@
-FROM tomcat:9.0.27-jdk8-openjdk
+FROM tomcat
+    RUN apt-get -y update && apt-get -y install openjdk
     VOLUME /tmp
     RUN chmod -R 777 $CATALINA_HOME/webapps
     ENV CATALINA_HOME /usr/local/tomcat
