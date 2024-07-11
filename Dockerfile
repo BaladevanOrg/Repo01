@@ -1,5 +1,5 @@
 FROM tomcat
-    RUN apt-get -y update && apt-get -y install openjdk
+    RUN apt update -y && apt install default-jdk -y
     VOLUME /tmp
     RUN chmod -R 777 $CATALINA_HOME/webapps
     ENV CATALINA_HOME /usr/local/tomcat
